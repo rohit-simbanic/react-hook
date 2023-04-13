@@ -1,12 +1,23 @@
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 
 const UseMemo = () => {
   const [count, setCount] = useState(0);
   const [click, setClick] = useState(false);
+
+  const upRise = (count) => {
+    if (count > 0) {
+      console.log(`You have clicked ${count} times`);
+    } else {
+      console.log("You have clicked 0 times");
+    }
+  };
+  const clickFunc = useMemo(() => upRise(count), [count]);
   console.log(count);
   return (
     <div className="container">
       {/* using useState hooks */}
+      <h2>No of Clicking times:</h2>
+      {clickFunc}
       <span
         className="icon"
         onClick={() => (count === 0 ? setCount(0) : setCount(count - 1))}
