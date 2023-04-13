@@ -11,20 +11,14 @@ const ReactForm = () => {
 
   const handleChange = (e) => {
     const name = e.target.name;
-    const value = e.target.value;
-    console.log(name, value);
+    let value = e.target.value;
+    // console.log(name, value);
     setFormData((prev) => {
       return { ...prev, [name]: value };
     });
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    setFormData({
-      username: "",
-      email: "",
-      password: "",
-      confirm_password: "",
-    });
   };
   return (
     <Wrapper>
