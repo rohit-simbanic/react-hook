@@ -2,6 +2,8 @@ import "./App.css";
 import ReactForm from "./components/ReactForm";
 import UseRef from "./components/UseRef/UseRef";
 import UseStateHook from "./components/UseStateHook";
+import CustomHook from "./components/customHooks/CustomHook";
+import UseCallBack from "./components/useCallBack/UseCallBack";
 import UseContext from "./components/useContext/UseContext";
 import { AppProvider } from "./components/useContext/UserContext";
 import UseEffect from "./components/useEffect/UseEffect";
@@ -25,6 +27,8 @@ function App() {
       <UseRef />
       <UseLayoutEffect />
       <UseMemo />
+      <UseCallBack />
+      <CustomHook />
     </AppProvider>
   );
 }

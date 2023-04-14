@@ -1,5 +1,7 @@
 import React, { useMemo, useState } from "react";
 
+// usememo returns memoized value but useCallback returns a memoized function
+
 const UseMemo = () => {
   const [count, setCount] = useState(0);
   const [click, setClick] = useState(false);

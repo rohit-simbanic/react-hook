@@ -1,8 +1,8 @@
-import React, { useContext } from "react";
-import { AppContext } from "./UserContext";
+import React from "react";
+import { useCustomContext } from "./UserContext";
 
 const UseContextChild = () => {
-  const userData = useContext(AppContext);
+  const userData = useCustomContext();
   console.log(userData);
   return (
     <div>
